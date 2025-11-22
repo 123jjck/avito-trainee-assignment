@@ -454,7 +454,7 @@ paths:
       summary: Получить базовую статистику
       responses:
         '200':
-          description: Простая статистика
+          description: Статистика
           content:
             application/json:
               schema:
@@ -470,3 +470,22 @@ paths:
                   - user_id: u3
                     username: Carol
                     count: 1
+
+  /health:
+    get:
+      tags: [Health]
+      summary: Проверка работоспособности сервиса
+      responses:
+        '200':
+          description: Сервис работает
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+              example:
+                status: ok
+        '405':
+          description: Метод не поддерживается
