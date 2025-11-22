@@ -1,0 +1,8 @@
+**/.DS_Store
+**/.git
+**/bin
+**/tmp
+**/vendor
+*.log
+*.swp
+node_modules
